@@ -1,67 +1,13 @@
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.md) [![Haxelib Version](https://img.shields.io/github/tag/openfl/lime.svg?style=flat&label=haxelib)](http://lib.haxe.org/p/lime) [![Build Status](https://img.shields.io/circleci/project/github/openfl/lime/develop.svg)](https://circleci.com/gh/openfl/lime)
-
-Lime
-====
-
-Lime is a flexible, lightweight layer for Haxe cross-platform developers.
-
-Lime supports native, Flash and HTML5 targets with unified support for:
-
- * Windowing
- * Input
- * Events
- * Audio
- * Render contexts
- * Network access
- * Assets
-
-Lime does not include a renderer, but exposes the current context:
-
- * Cairo
- * Canvas
- * DOM
- * Flash
- * GL
-
-The GL context is based upon the WebGL standard, implemented for both OpenGL and OpenGL ES as needed.
-
-Lime provides a unified audio API, but also provides access to OpenAL for advanced audio on native targets.
-
-
-License
-=======
-
-Lime is free, open-source software under the [MIT license](LICENSE.md).
-
-
-Installation
-============
-
-First install the latest version of [Haxe](http://www.haxe.org/download).
-
-The current version of Lime has not been released on haxelib, yet, so please install the latest [development build](http://www.openfl.org/builds/lime).
-
-
-Development Builds
-==================
-
-When there are changes, Lime is built nightly. Builds are available for download [here](http://www.openfl.org/builds/lime).
-
-To install a development build, use the "haxelib local" command:
-
-    haxelib local filename.zip
-
-
 Building from Source
 ====================
 
 Clone the Lime repository, as well as the submodules:
 
-    git clone --recursive https://github.com/openfl/lime
+    git clone -b native --recursive https://github.com/guruas3/lime.git native
 
 Tell haxelib where your development copy of Lime is installed:
 
-    haxelib dev lime lime
+    haxelib dev lime native
 
 The first time you run the "lime" command, it will attempt to build the Lime standard binary for your desktop platform as the command-line tools. To build these manually, use the following command (using "mac" or "linux" if appropriate):
 
@@ -84,19 +30,6 @@ On a Windows machine, you should have Microsoft Visual Studio C++ (Express is ju
 To switch away from a source build, use:
 
     haxelib dev lime
-
-
-Sample
-======
-
-You can build a sample Lime project with the following commands:
-
-    lime create HelloWorld
-    cd HelloWorld
-    lime test neko
-
-You can also list other projects that are available using "lime create".
-
 
 Targets
 =======
